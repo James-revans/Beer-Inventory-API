@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 var beerSchema = new Schema({
     name: String,
     type: String,
-    quantity: Number
+    quantity: Number,
+    userId: String
 });
 
 // the schema is useless so far

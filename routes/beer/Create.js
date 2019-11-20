@@ -9,7 +9,8 @@ module.exports = (req, res) => {
     let newBeer = userSchema({
         name: req.body.name,
         type: req.body.type,
-        quantity: req.body.quantity
+        quantity: req.body.quantity,
+        userId: req.user._id
     });
     //save the new task
     newBeer.save((err, beer) => {

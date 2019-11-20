@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/example', exampleRouter);
 app.use('/auth', authRouter);
-app.use('/beer', beerRouter);
+app.use('/beer', passport.authenticate('jwt', { session : false }), beerRouter);
 app.use('/', passport.authenticate('jwt', { session : false }), profileRouter);
 
 
